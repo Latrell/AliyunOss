@@ -1,0 +1,34 @@
+{
+    "name": "latrell/aliyun-oss-laravel",
+    "description": "Aliyun object storage service (SLS) SDK in Laravel5 package.",
+    "keywords": [
+        "L5",
+        "Laravel 5",
+        "Laravel",
+        "Aliyun",
+        "OSS"
+    ],
+    "homepage": "https://github.com/Latrell/aliyun-oss-laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Latrell Chan",
+            "email": "i@latrell.me"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/config": "~5.0",
+        "illuminate/support": "~5.0",
+        "aliyuncs/oss-sdk-php": "~2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.0"
+    },
+    "autoload": {
+         "psr-4": {
+            "Latrell\\AliyunOss\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
