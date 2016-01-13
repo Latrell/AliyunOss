@@ -33,11 +33,11 @@ class AliyunOssServiceProvider extends ServiceProvider
 	{
 		$this->app->singleton('aliyun.oss', function ($app) {
 			$config = $app->config->get('latrell-aliyun-oss');
-			$access_key_id = $config->get('access_key_id', '');
-			$access_key_secret = $config->get('access_key_secret', '');
-			$endpoint = $config->get('endpoint', '');
-			$is_cname = $config->get('is_cname', false);
-			$security_token = $config->get('security_token', null);
+			$access_key_id = array_get($config, 'access_key_id', '');
+			$access_key_secret = array_get($config, 'access_key_secret', '');
+			$endpoint = array_get($config, 'endpoint', '');
+			$is_cname = array_get($config, 'is_cname', false);
+			$security_token = array_get($config, 'security_token', null);
 			return new OssClient($access_key_id, $access_key_secret, $endpoint, $is_cname, $security_token);
 		});
 	}
